@@ -71,7 +71,7 @@ export default {
       const g = this.groupArray[x]
       const res = { name: g, id: g, children: [] }
       for (let i = x + 1; i < this.groupArray.length; i++) {
-        if (this.visited[i]) break
+        if (this.visited[i]) continue
         if (this.groupArray[i].indexOf(g) === 0) {
           res.children.push(this.parseTree(i))
         }
